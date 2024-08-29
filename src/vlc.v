@@ -1,13 +1,13 @@
-module vlc(input Turn_Left,Turn_Right,Emergency,clk,rst,output reg
+module vlc(input Turn_Left,Turn_Right,Emergency,clk,rst_n,output reg
 [2:0]Left_Lamp,Right_Lamp);
 wire newclock,newclock2,out_newclock;
 clockdivider clock(.clk100(clk),.newclk(newclock));
 clockdivider2 clock2(.clk1002(clk),.newclk2(newclock2));
 parameter s0=0,s1=1,s2=2,s3=3,s4=4,s5=5;
 reg [3:0]ps,ns ;
-always @(posedge out_newclock or posedge rst)
+  always @(posedge out_newclock or posedge rst_n)
 begin
-if(rst)
+  if(rst_n)
 ps<=s0;
 else
 ps<=ns;
