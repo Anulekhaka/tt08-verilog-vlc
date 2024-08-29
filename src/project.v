@@ -34,7 +34,7 @@ module tt_um_vlc (
         //.Right_Lamp[1],
         //.Right_Lamp[2],
         .clk(clk),
-        .rst_n(rst_n)
+        .rst_n(rst)
         
     );
 endmodule
