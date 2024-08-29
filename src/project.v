@@ -20,12 +20,9 @@ module tt_um_vlc (
   assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   assign uio_out = 0;
   assign uio_oe  = 0;
-    assign uo_out(7:6)= 0;
-    assign ui_in(7:3) = 0;
-    
+  assign uo_out(7:6)= 0;
 
-  // List all unused inputs to prevent warnings
-  wire _unused = &{ena, 1'b0};
+  
     vlc vlc(
         .Turn_Left(ui_in[0]),
         .Turn_Right(ui_in[1]),
@@ -37,7 +34,7 @@ module tt_um_vlc (
         .Left_Lamp[1](uo_out[4]),
         .Left_Lamp[2](uo_out[5]),
         .clk(clk),
-        .rst_n(rst_n),
+        .rst_n(rst_n)
         
     );
 endmodule
