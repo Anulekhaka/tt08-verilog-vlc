@@ -27,12 +27,12 @@ module tt_um_vlc (
         .Turn_Left(ui_in[0]),
         .Turn_Right(ui_in[1]),
         .Emergency(ui_in[2]),
-        .Left_Lamp[0],
-        .Left_Lamp[1],
-        .Left_Lamp[2],
-        .Right_Lamp[0],
-        .Right_Lamp[1],
-        .Right_Lamp[2],
+        .Left_Lamp(uo_out[2:0]),
+        //.Left_Lamp[1],
+        //.Left_Lamp[2],
+        .Right_Lamp(uo_out[5:3]),
+        //.Right_Lamp[1],
+        //.Right_Lamp[2],
         .clk(clk),
         .rst_n(rst_n)
         
