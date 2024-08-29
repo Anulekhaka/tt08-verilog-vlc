@@ -23,7 +23,7 @@ module tt_um_vlc (
   assign uo_out [7:6]= 0;
 
   
-    vlc vlc1(
+    vlc vlc(
         .Turn_Left(ui_in[0]),
         .Turn_Right(ui_in[1]),
         .Emergency(ui_in[2]),
