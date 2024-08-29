@@ -20,7 +20,7 @@ module tt_um_vlc (
   assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   assign uio_out = 0;
   assign uio_oe  = 0;
-    assign uo_out [7:6]= 0;
+  assign uo_out [7:6]= 0;
 
   
     vlc vlc(
@@ -30,9 +30,9 @@ module tt_um_vlc (
         .Left_Lamp[0](uo_out[0]),
         .Left_Lamp[1](uo_out[1]),
         .Left_Lamp[2](uo_out[2]),
-        .Left_Lamp[0](uo_out[3]),
-        .Left_Lamp[1](uo_out[4]),
-        .Left_Lamp[2](uo_out[5]),
+        .Right_Lamp[0](uo_out[3]),
+        .Right_Lamp[1](uo_out[4]),
+        .Right_Lamp[2](uo_out[5]),
         .clk(clk),
         .rst_n(rst_n)
         
